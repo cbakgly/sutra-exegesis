@@ -2,270 +2,274 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" about="cbakgly@qq.com">
-    <title>楞严经文句</title>
-    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
-    <style>
-        body {
-            font-size: 14px;
-            font-family: "microsoft yahei", verdana, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #f0f0f0 url(http://114.112.58.174:8080/fahuakepan/img/noise-bg.gif);
-            color: #444;
+<meta charset="UTF-8" about="cbakgly@qq.com">
+<title>楞严经文句</title>
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<style>
+    body {
+        font-size: 14px;
+        font-family: "microsoft yahei", verdana, sans-serif;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #f0f0f0 url(http://114.112.58.174:8080/fahuakepan/img/noise-bg.gif);
+        color: #444;
+    }
+
+    h1, h2, h3, .author {
+        text-align: center;
+    }
+
+    h5 {
+        text-align: right;
+    }
+
+    .author, .epilogue {
+        color: #666;
+        background: none;
+        padding-left: 0;
+        cursor: inherit;
+    }
+
+    .sutra {
+        padding-left: 15rem;
+        color: #1d5160;
+        font-size: 16px;
+        line-height: 24px;
+        padding-right: 6rem;
+    }
+
+    .top {
+        background-color: #f7f2e0;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        text-align: right;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    p {
+        cursor: pointer;
+        color: #815b44;
+    }
+
+    .annotation {
+        background-color: #F7F2E0;
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        display: none;
+    }
+
+    .anno-line:after {
+        content: "⁺";
+    }
+
+    .index {
+        padding-left: 1rem;
+        font-size: 14px;
+    }
+
+    .index-mark-open:before {
+        content: '- ';
+    }
+
+    .index-mark-close:before {
+        content: '+';
+    }
+
+    #disclaimer {
+        display: none;
+        text-align: center;
+        border: thin dashed;
+    }
+
+    @media screen and (max-width: 40rem){
+        .sutra{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+</style>
+<style type="text/css">
+    /* General styles for all menus */
+    .cbp-spmenu {
+        background: #47a3da;
+        position: fixed;
+    }
+
+    .cbp-spmenu h3 {
+        color: #afdefa;
+        font-size: 1.9rem;
+        padding: 20px;
+        margin: 0;
+        font-weight: 300;
+        background: #0d77b6;
+    }
+
+    .cbp-spmenu a {
+        display: block;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+
+    .cbp-spmenu a:hover {
+        background: #258ecd;
+    }
+
+    .cbp-spmenu a:active {
+        background: #afdefa;
+        color: #47a3da;
+    }
+
+    /* Orientation-dependent styles for the content of the menu */
+
+    .cbp-spmenu-vertical {
+        width: 240px;
+        height: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .cbp-spmenu-vertical a {
+        border-bottom: 1px solid #258ecd;
+        padding: 1rem;
+    }
+
+    .cbp-spmenu-horizontal {
+        width: 100%;
+        height: 150px;
+        left: 0;
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .cbp-spmenu-horizontal h3 {
+        height: 100%;
+        width: 20%;
+        float: left;
+    }
+
+    .cbp-spmenu-horizontal a {
+        float: left;
+        width: 20%;
+        padding: 0.8rem;
+        border-left: 1px solid #258ecd;
+    }
+
+    /* Vertical menu that slides from the left or right */
+
+    .cbp-spmenu-left {
+        left: -240px;
+    }
+
+    .cbp-spmenu-right {
+        right: -240px;
+    }
+
+    .cbp-spmenu-left.cbp-spmenu-open {
+        left: 0px;
+    }
+
+    .cbp-spmenu-right.cbp-spmenu-open {
+        right: 0px;
+    }
+
+    /* Horizontal menu that slides from the top or bottom */
+
+    .cbp-spmenu-top {
+        top: -150px;
+    }
+
+    .cbp-spmenu-bottom {
+        bottom: -150px;
+    }
+
+    .cbp-spmenu-top.cbp-spmenu-open {
+        top: 0px;
+    }
+
+    .cbp-spmenu-bottom.cbp-spmenu-open {
+        bottom: 0px;
+    }
+
+    /* Push classes applied to the body */
+
+    .cbp-spmenu-push {
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+    }
+
+    .cbp-spmenu-push-toright {
+        left: 240px;
+    }
+
+    .cbp-spmenu-push-toleft {
+        left: -240px;
+    }
+
+    .cbp-spmenu-push-toleft-byaddright {
+        right: 250px;
+    }
+    /* Transitions */
+
+    .cbp-spmenu,
+    .cbp-spmenu-push {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    /* Example media queries */
+
+    @media screen and (max-width: 55.1875rem){
+
+        .cbp-spmenu-horizontal {
+            font-size: 75%;
+            height: 110px;
         }
 
-        h1, H2, h3, .author {
-            text-align: center;
+        .cbp-spmenu-top {
+            top: -110px;
         }
 
-        h5 {
-            text-align: right;
+        .cbp-spmenu-bottom {
+            bottom: -110px;
         }
 
-        .author, .epilogue {
-            color: #666;
-            background: none;
-            padding-left: 0;
-            cursor: inherit;
+    }
+
+    @media screen and (max-height: 26.375rem){
+
+        .cbp-spmenu-vertical {
+            font-size: 90%;
+            width: 190px;
         }
 
-        .sutra {
-            padding-left: 15rem;
-            color: #1d5160;
-            font-size: 16px;
-            line-height: 24px;
-            padding-right: 85px;
+        .cbp-spmenu-left,
+        .cbp-spmenu-push-toleft {
+            left: -190px;
         }
 
-        .nav_bar {
-            position: fixed;
-            right: 0;
-            top: 150px;
-            width: 80px;
+        .cbp-spmenu-right {
+            right: -190px;
         }
 
-        .nav_bar > a {
-            display: inline-block;
-            width: 80px;
-            height: 30px;
-            text-align: center;
-            color: #fff;
-            background: rgba(29, 81, 96, .5);
-            margin-bottom: 1px;
-            text-decoration: none;
-            line-height: 30px;
+        .cbp-spmenu-push-toright {
+            left: 190px;
         }
-
-        .nav_bar > a:hover,
-        #nav_bar_on {
-            background: rgba(29, 81, 96, .7);
-        }
-
-        p {
-            cursor: pointer;
-            color: #815b44;
-        }
-
-        .annotation {
-            background-color: #F7F2E0;
-            border-style: solid;
-            border-width: 1px;
-            padding: 10px;
-            display: none;
-        }
-
-        .anno-line:after {
-            content: "⁺";
-        }
-
-        .index {
-            padding-left: 1rem;
-            font-size: 14px;
-        }
-
-        .index-mark-open:before {
-            content: '- ';
-        }
-
-        .index-mark-close:before {
-            content: '+';
-        }
-
-        #disclaimer {
-            display: none;
-            text-align: center;
-            border: thin dashed;
-        }
-
-        @media screen and (max-width: 640px){
-            .sutra{
-                padding-left: 2rem;
-                padding-right: 50px;
-            }
-            .annotation{
-                margin-right: 65px;
-            }
-            .nav_bar{
-                font-size: 12px;
-                width: 50px;
-                top: 120px;
-            }
-            .nav_bar a{
-                width: 50px;
-            }
-        }
-    </style>
-    <script type="text/javascript">
-        function init() {
-            if (!document.getElementsByClassName) {
-                var disclaimer = document.getElementById('disclaimer');
-                disclaimer.style.display = 'block';
-                return;
-            }
-
-            // Init side bar
-            var anchorList = document.getElementById("nav_bar").getElementsByTagName("a");
-            var anchorLength = anchorList.length;
-            for (var j = 0, _len = anchorLength; j < _len; j++) {
-                anchorList[j].onclick = function () {
-                    var on = document.getElementById('nav_bar_on');
-                    if (this !== on) {
-                        on.id = '';
-                        this.id = "nav_bar_on";
-                    }
-                    var next = document.getElementById(this.getAttribute('href').substr(1));
-                    next.style.display = 'block';
-                    while(next = next.nextElementSibling) {
-                        if (next.heading) break;
-                        if (next.indent) {
-                            next.className = 'index index-mark-open';
-                            next.style.display = 'block';
-                        } else if (next.sutra) {
-                            next.style.display = 'block';
-                        }
-                    }
-                }
-            }
-
-            var headList = document.getElementsByTagName("h2");
-            for (var h= 0, head; head = headList[h]; h++) {
-                head.heading = 1;
-            }
-            headList = document.getElementsByTagName("h5");
-            for (h= 0, head; head = headList[h]; h++) {
-                head.heading = 1;
-            }
-
-            var container = document.getElementById("tree");
-
-            // For each sutra, apply anno view function.
-            var sutraList = container.getElementsByClassName('sutra');
-            for (var b = 0, str; str = sutraList[b]; b++) {
-                str.onclick = function () {
-                    if (!this.nextElementSibling.anno) return;
-                    if (this.nextElementSibling.style.display == 'none' || this.nextElementSibling.style.display == '') {
-                        this.nextElementSibling.style.display = 'block';
-                    } else {
-                        this.nextElementSibling.style.display = 'none';
-                    }
-                };
-                str.sutra = 1;
-            }
-
-            // Dblclick to close anno.
-            var annoList = container.getElementsByClassName('annotation');
-            for (b = 0, str; str = annoList[b]; b++) {
-                str.ondblclick = function () {
-                    this.style.display = 'none';
-                };
-                str.anno = 1;
-            }
-
-            var factor = 8;
-            if (screen.width < 640) {
-                factor = 2;
-            }
-
-            // For each index, apply indent and assign click funciton.
-            var indexList = container.getElementsByClassName('index');
-            for (var a = 0, idx; idx = indexList[a]; a++) {
-                var sn = 0;
-                switch (idx.innerHTML.charAt(0)) {
-                    case '甲': sn = 1;break;
-                    case '乙': sn = 2; break;
-                    case '丙': sn = 3; break;
-                    case '丁': sn = 4; break;
-                    case '戊':
-                    case '戉': sn = 5; break;
-                    case '己':
-                    case '已': sn = 6; break;
-                    case '庚': sn = 7; break;
-                    case '辛': sn = 8; break;
-                    case '壬': sn = 9; break;
-                    case '癸': sn = 10; break;
-                    case '子': sn = 11; break;
-                    case '丑': sn = 12; break;
-                    case '寅': sn = 13; break;
-                    case '卯': sn = 14; break;
-                    case '辰': sn = 15; break;
-                    case '巳': sn = 16; break;
-                    case '午': sn = 17; break;
-                    case '未': sn = 18; break;
-                    case '申': sn = 19; break;
-                    case '酉': sn = 20; break;
-                    case '戌': sn = 21; break;
-                    case '亥': sn = 22; break;
-                    default:
-                        console.log('Wrong index ' + idx.innerHTML);
-                }
-                idx.style.textIndent = sn*factor + 'px';
-                idx.indent = sn;
-                idx.pos = a;
-
-                idx.onclick = function () {
-                    var toClose = this.className.split(' ')[1] === 'index-mark-open';
-                    var depth = this.indent;
-                    var next = this;
-                    if (toClose) {
-                        next.className = 'index index-mark-close';
-                        while(next = next.nextElementSibling) {
-                            if (next.indent && next.indent <= depth) break;
-                            if (next.indent) {
-                                next.className = 'index index-mark-close';
-                                next.style.display = 'none';
-                            } else if (next.sutra || next.heading || next.anno) {
-                                next.style.display = 'none';
-                            }
-                        }
-                    } else {
-                        next.className = 'index index-mark-open';
-                        while(next = next.nextElementSibling) {
-                            if (next.indent && next.indent <= depth) break;
-                            if (next.indent) {
-                                next.className = 'index index-mark-open';
-                                next.style.display = 'block';
-                            } else if (next.sutra || next.heading) {
-                                next.style.display = 'block';
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    }
+</style>
 </head>
 
-<body onload="init();">
-<P id='disclaimer'>基本功能需要IE9+浏览器支持。推荐Chrome和Firefox。</P>
-<h1>楞严经文句</h1>
-<p class="author">
-    唐天竺沙门般剌密谛译经
-    <br> 明菩萨沙弥古吴智旭(蕅益大师)文句
-    <br> 菩萨比丘温陵道昉参订
-</p>
-<aside class="nav_bar" id="nav_bar">
-    <a href="#n1" id="nav_bar_on">卷第一</a>
+<body class="cbp-spmenu-push">
+<div class="top"><span id="menu-button">|||</span></div>
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="nav_bar">
+    <h3>导航</h3>
+    <a href="#n1">卷第一</a>
     <a href="#n2">卷第二</a>
     <a href="#n3">卷第三</a>
     <a href="#n4">卷第四</a>
@@ -276,7 +280,14 @@
     <a href="#n9">卷第九</a>
     <a href="#n10">卷第十</a>
     <a href="#n11">后序</a>
-</aside>
+</nav>
+<P id='disclaimer'>基本功能需要IE9+浏览器支持。推荐Chrome和Firefox。</P>
+<h1>楞严经文句</h1>
+<p class="author">
+    唐天竺沙门般剌密谛译经
+    <br> 明菩萨沙弥古吴智旭(蕅益大师)文句
+    <br> 菩萨比丘温陵道昉参订
+</p>
 <div id="tree">
     <H2 class="anno-line" id='n1'>大佛顶如来密因修证了义诸菩萨万行首楞严经卷第一文句</H2>
     <P class="annotation">
@@ -3544,6 +3555,223 @@
         </center>
     </div>
 </div>
+<script type="text/javascript">
+/*!
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ *
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+
+/*jshint browser: true, strict: true, undef: true */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+window.classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+})( window );
+</script>
+<script type="text/javascript">
+(function () {
+    if (!document.getElementsByClassName) {
+        var disclaimer = document.getElementById('disclaimer');
+        disclaimer.style.display = 'block';
+        return;
+    }
+
+    var nav_bar = document.getElementById("nav_bar");
+    var menu_button = document.getElementById("menu-button");
+    menu_button.onclick = function(){
+        classie.toggle( this, 'active' );
+        classie.toggle( document.body, 'cbp-spmenu-push-toleft' );
+        classie.toggle( this.parentElement, 'cbp-spmenu-push-toleft-byaddright' );
+        classie.toggle( nav_bar, 'cbp-spmenu-open' );
+        // disableOther( 'showRightPush' );
+    };
+
+    // Init side bar
+    var anchorList = nav_bar.getElementsByTagName("a");
+    var anchorLength = anchorList.length;
+    for (var j = 0, _len = anchorLength; j < _len; j++) {
+        anchorList[j].onclick = function () {
+            menu_button.onclick();
+
+            var next = document.getElementById(this.getAttribute('href').substr(1));
+            next.style.display = 'block';
+            while(next = next.nextElementSibling) {
+                if (next.heading) break;
+                if (next.indent) {
+                    next.className = 'index index-mark-open';
+                    next.style.display = 'block';
+                } else if (next.sutra) {
+                    next.style.display = 'block';
+                }
+            }
+        }
+    }
+
+    var headList = document.getElementsByTagName("h2");
+    for (var h= 0, head; head = headList[h]; h++) {
+        head.heading = 1;
+    }
+    headList = document.getElementsByTagName("h5");
+    for (h= 0, head; head = headList[h]; h++) {
+        head.heading = 1;
+    }
+
+    var container = document.getElementById("tree");
+
+    // For each sutra, apply anno view function.
+    var sutraList = container.getElementsByClassName('sutra');
+    for (var b = 0, str; str = sutraList[b]; b++) {
+        str.onclick = function () {
+            if (!this.nextElementSibling.anno) return;
+            if (this.nextElementSibling.style.display == 'none' || this.nextElementSibling.style.display == '') {
+                this.nextElementSibling.style.display = 'block';
+            } else {
+                this.nextElementSibling.style.display = 'none';
+            }
+        };
+        str.sutra = 1;
+    }
+
+    // Dblclick to close anno.
+    var annoList = container.getElementsByClassName('annotation');
+    for (b = 0, str; str = annoList[b]; b++) {
+        str.ondblclick = function () {
+            this.style.display = 'none';
+        };
+        str.anno = 1;
+    }
+
+    var factor = 8;
+    if (screen.width < 640) {
+        factor = 2;
+    }
+
+    // For each index, apply indent and assign click funciton.
+    var indexList = container.getElementsByClassName('index');
+    for (var a = 0, idx; idx = indexList[a]; a++) {
+        var sn = 0;
+        switch (idx.innerHTML.charAt(0)) {
+            case '甲': sn = 1;break;
+            case '乙': sn = 2; break;
+            case '丙': sn = 3; break;
+            case '丁': sn = 4; break;
+            case '戊':
+            case '戉': sn = 5; break;
+            case '己':
+            case '已': sn = 6; break;
+            case '庚': sn = 7; break;
+            case '辛': sn = 8; break;
+            case '壬': sn = 9; break;
+            case '癸': sn = 10; break;
+            case '子': sn = 11; break;
+            case '丑': sn = 12; break;
+            case '寅': sn = 13; break;
+            case '卯': sn = 14; break;
+            case '辰': sn = 15; break;
+            case '巳': sn = 16; break;
+            case '午': sn = 17; break;
+            case '未': sn = 18; break;
+            case '申': sn = 19; break;
+            case '酉': sn = 20; break;
+            case '戌': sn = 21; break;
+            case '亥': sn = 22; break;
+            default:
+                console.log('Wrong index ' + idx.innerHTML);
+        }
+        idx.style.textIndent = sn*factor + 'px';
+        idx.indent = sn;
+        idx.pos = a;
+
+        idx.onclick = function () {
+            var toClose = this.className.split(' ')[1] === 'index-mark-open';
+            var depth = this.indent;
+            var next = this;
+            if (toClose) {
+                next.className = 'index index-mark-close';
+                while(next = next.nextElementSibling) {
+                    if (next.indent && next.indent <= depth) break;
+                    if (next.indent) {
+                        next.className = 'index index-mark-close';
+                        next.style.display = 'none';
+                    } else if (next.sutra || next.heading || next.anno) {
+                        next.style.display = 'none';
+                    }
+                }
+            } else {
+                next.className = 'index index-mark-open';
+                while(next = next.nextElementSibling) {
+                    if (next.indent && next.indent <= depth) break;
+                    if (next.indent) {
+                        next.className = 'index index-mark-open';
+                        next.style.display = 'block';
+                    } else if (next.sutra || next.heading) {
+                        next.style.display = 'block';
+                    }
+                }
+            }
+        }
+    }
+})();
+</script>
 </body>
 
 </html>
